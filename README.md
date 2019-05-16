@@ -5,7 +5,7 @@ Predict user's activity based on accelerometer/gyroscope/magnetometer readings o
 Sample data from [here](https://drive.google.com/file/d/1YNG0PPv0lnKKHzDBd3uWq248k7Aj-I8q) to be stored in `src/main/resources/testdata/activity-monitoring/imu_activity_recognition.csv`
 
 ## Pipeline
-
+![alt text](https://raw.githubusercontent.com/nilan3/intelematics-activity-recognition/master/pipeline_architecture.png)
 ### Preprocessing Job - `ActivityRecognitionApplication`
 ```bash
 Main class: com.intelematics.medm.application.activityrecognition.ActivityRecognitionApplication
@@ -50,6 +50,8 @@ Input features:
 Output Label: activity_id
 
 Hidden Layers: 1
+
+![alt text](https://raw.githubusercontent.com/nilan3/intelematics-activity-recognition/master/neural_network.png)
 
 Input features are **standardised** to have a mean of 0 and stdev of 1. This is because measurements are of different units so standardisation can prevent large weight values and high sensitivity to input data.
 
