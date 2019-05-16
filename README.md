@@ -56,6 +56,10 @@ Hidden Layers: 1
 Input features are **standardised** to have a mean of 0 and stdev of 1. This is because measurements are of different units so standardisation can prevent large weight values and high sensitivity to input data.
 
 Once training has completed, scaler and model is saved to HDFS for later use in a streaming pipeline.
+Observed Accuracy of model:
+```bash
+Test Accuracy = 0.822116781253026
+```
 
 ### Streaming Job - `ActivityRecognitionStreamingPrediction`
 ```bash
