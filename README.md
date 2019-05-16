@@ -75,3 +75,4 @@ It was later discovered that `MultilayerPerceptronClassifier` does not currently
 - Implement anomaly detection in the pre processing phase to remove any abnormal data which can affect the neural network.
   - Merge all measurements to form a signature for a user's activity. Use similarity algorithm (e.g. cosine similarity) to identify groups of similar behaviour but most importantly any abnormal ones which can be filtered out before training.
   - or use isolation forest to pick out anomalies
+- Further reduce data but checking correlation factor between IMU measurements and activity/heart rate. If no clear trend, we can remove sensor readings.
