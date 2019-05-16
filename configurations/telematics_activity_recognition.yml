@@ -1,0 +1,14 @@
+spark:
+  appName: intelematics-activity-recognition
+  master: local[*]
+  shuffle_partitions: 5
+  consoleWriter: true
+
+hdfs:
+  input: src/main/resources/testdata/activity-monitoring/imu_activity_recognition.csv
+  output:
+    - src/main/resources/testdata/activity-monitoring/results.parquet
+
+aggregation:
+  imuFreq: 100
+  hrFreq: 9

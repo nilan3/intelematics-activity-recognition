@@ -1,0 +1,24 @@
+spark:
+  appName: mlp-network-activity-recognition
+  master: local[*]
+  shuffle_partitions: 5
+  checkpointLocation: src/main/resources/checkpoints/activity-recognition
+  consoleWriter: true
+
+hdfs:
+  input: src/main/resources/testdata/activity-monitoring/results.parquet
+  output: src/main/resources/testdata/activity-monitoring/model
+
+model:
+  features:
+    - heart_rate
+    - wrist_accelerometer
+    - wrist_gyroscope
+    - wrist_magnetometer
+    - chest_accelerometer
+    - chest_gyroscope
+    - chest_magnetometer
+    - ankle_accelerometer
+    - ankle_gyroscope
+    - ankle_magnetometer
+  label: activity_id

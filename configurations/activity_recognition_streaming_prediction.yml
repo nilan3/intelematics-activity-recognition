@@ -1,0 +1,23 @@
+spark:
+  appName: activity-recognition-streaming-prediction
+  master: local[*]
+  shuffle_partitions: 5
+  outputMode: append
+  consoleWriter: true
+
+hdfs:
+  input: src/main/resources/testdata/activity-monitoring/streaming
+  maxFilesPerTrigger: 1
+  model: src/main/resources/testdata/activity-monitoring/model/model
+  scaler: src/main/resources/testdata/activity-monitoring/model/scaler
+
+# example config for kafka - not tested
+kafka:
+  bootstrap_servers: host1:9092,host2:9092,host3:9092
+  failOnDataLoss: true
+  topicOutput: topic_name
+  compression: gzip
+
+aggregation:
+  imuFreq: 100
+  hrFreq: 9
