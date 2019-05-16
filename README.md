@@ -51,7 +51,7 @@ Output Label: activity_id
 
 Hidden Layers: 1
 
-![alt text](https://raw.githubusercontent.com/nilan3/intelematics-activity-recognition/master/neural_network.png)
+![alt text](https://raw.githubusercontent.com/nilan3/intelematics-activity-recognition/master/neural_network_diagram.png)
 
 Input features are **standardised** to have a mean of 0 and stdev of 1. This is because measurements are of different units so standardisation can prevent large weight values and high sensitivity to input data.
 
