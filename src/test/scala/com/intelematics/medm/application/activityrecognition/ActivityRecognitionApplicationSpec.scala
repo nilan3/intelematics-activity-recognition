@@ -21,10 +21,11 @@ class ActivityRecognitionApplicationSpec extends FunSuite with SparkSessionHelpe
     val input_z = "5.58753"
     val expected = BigDecimal(10.2309515840)
     val actual = processor.sqrtBigDec(input_x, input_y, input_z)
+    assert(actual == expected)
 
   }
 
-  test("test forward fill on Dataframe") {
+  test("test aggregation on Dataframe") {
     val input_df = buildTestDf(spark, "src/test/resources/data/activity-recognition/aggregation/input")
     val expected = buildTestDf(spark, "src/test/resources/data/activity-recognition/aggregation/expected").collect().toSet
     val actual = processor.agg(input_df, 11).coalesce(1).collect().toSet
