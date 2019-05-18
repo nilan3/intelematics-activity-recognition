@@ -12,7 +12,7 @@ Main class: com.intelematics.medm.application.activityrecognition.ActivityRecogn
 Program arguments: configurations/telematics_activity_recognition.yml
 ```
 The data currently has many missing parts:
-- N rows contains 'NA' for all IMU and HR measurements which can be removed
+- 40 rows contains 'NA' for all IMU and HR measurements which can be removed
 - 14326 rows contains 'NA' for at least 1 IMU measurement
 - HR measurements are sampled at low frequency (11x less data)
 
